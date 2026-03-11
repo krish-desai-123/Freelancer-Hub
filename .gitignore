@@ -1,0 +1,105 @@
+# =========================
+# Byte-compiled / Optimized / DLL files
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# =========================
+# Python Virtual Environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Django Specific
+# =========================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+media_root/
+staticfiles/
+static_root/
+
+# =========================
+# Environment Variables & Secrets
+# =========================
+.env
+.env.*
+*.pem
+
+# =========================
+# IDEs & Editors
+# =========================
+# PyCharm
+.idea/
+*.iml
+*.iws
+.run/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS Files
+# =========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+
+# =========================
+# Testing / Coverage Reports
+# =========================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+.mypy_cache/
+
+# =========================
+# Data Science / Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Distribution / Packaging
+# =========================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =========================
+# Alternative Package Managers
+# =========================
+Pipfile.lock
+poetry.lock
