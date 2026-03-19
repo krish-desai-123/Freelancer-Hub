@@ -19,15 +19,16 @@ SECRET_KEY = base64.b64decode(os.getenv('SECRET_KEY')).decode()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = bool(os.getenv('DEBUG'))
+DEBUG = os.getenv('DEBUG')
+
+def show_toolbar(request):
+    return DEBUG
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
-    "SHOW_TOOLBAR_CALLBACK": DEBUG,
+    "SHOW_TOOLBAR_CALLBACK": show_toolbar,
     "INSERT_BEFORE": "</head>",
     "RENDER_PANELS": True,
 }
-
-
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     'user',
+    'freelancer',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +64,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'user.User'
 
 if DEBUG:
     MIDDLEWARE += [
